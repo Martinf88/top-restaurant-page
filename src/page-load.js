@@ -3,20 +3,33 @@ const homeSection = document.getElementById("home");
 const menuSection = document.getElementById("menu");
 const contactSection = document.getElementById("contact");
 
-export function createHome() {
+export function pageLoad() {
+  contentDiv.innerHTML = "";
+  loadHomeSection();
+}
+
+function createSection(id) {
+  const section = document.createElement("section");
+  section.id = id;
+  return section;
+}
+
+function loadHomeSection() {
+  const homeSection = createSection("home");
+
   const eyebrow = document.createElement("p");
-  eyebrow.classList.add("content__preTitle");
-  eyebrow.textContent = "EST. 1997 - Florence";
+  eyebrow.classList.add("content__eyebrow");
+  eyebrow.textContent = "EST. 1988 · TOKYO";
   homeSection.appendChild(eyebrow);
 
   const title = document.createElement("h1");
   title.classList.add("content__title");
-  title.textContent = "La Tavola";
+  title.textContent = "Izakaya Maru";
   homeSection.appendChild(title);
 
   const tagline = document.createElement("p");
   tagline.classList.add("content__tagline");
-  tagline.textContent = "Where tradition meets the table";
+  tagline.textContent = "Drinks, bites & good company";
   homeSection.appendChild(tagline);
 
   const viewMenu = document.createElement("button");
@@ -27,7 +40,9 @@ export function createHome() {
   contentDiv.appendChild(homeSection);
 }
 
-export function createMenu() {
+function loadMenuSection() {
+  const menuSection = createSection("menu");
+
   const menuTitle = document.createElement("h1");
   menuTitle.classList.add("menu__title");
   menuTitle.textContent = "Our Menu";
@@ -35,7 +50,9 @@ export function createMenu() {
 
   contentDiv.appendChild(menuSection);
 }
-export function createContact() {
+function loadContactSection() {
+  const contactSection = createSection("contact");
+
   const contactTitle = document.createElement("h1");
   contactTitle.classList.add("contact__title");
   contactTitle.textContent = "Visit Us";

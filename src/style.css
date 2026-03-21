@@ -1,3 +1,109 @@
+:root {
+  --primary-bg-color: hsl(0, 5%, 4%);
+  --primary-text-color: hsl(0, 0%, 90%);
+  --secondary-text-color: hsl(0, 60%, 50%);
+  --accent-color: hsl(0, 90%, 50%);
+}
+
 body {
-  background-color: rebeccapurple;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 0;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-bg-color);
+  color: var(--secondary-text-color);
+  padding: 10px 30px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-btn {
+  display: none;
+  color: hsl(40, 15%, 50%);
+  font-size: 1.3rem;
+  font-family: "Lora", serif;
+}
+
+#content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f2f2f2;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/pema-g-lama-6cfK0SEtpbY-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.content__eyebrow,
+.content__tagline {
+  color: hsl(0, 0%, 90%);
+  font-family: "Lora", serif;
+}
+
+.content__eyebrow {
+  font-size: 1.1rem;
+  word-spacing: 0.5rem;
+}
+
+.content__title {
+  font-size: 3rem;
+}
+
+.content__tagline {
+  font-size: 1.2rem;
+  margin-top: 2.5rem;
+}
+
+.content__btn {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  font-family: "Lora", serif;
+  font-weight: 700;
+}
+
+.size-6 {
+  height: 30px;
+  color: var(--secondary-text-color);
 }

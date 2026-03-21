@@ -1,6 +1,4 @@
 import "./style.css";
-import { createHome, createMenu, createContact } from "./content.js";
+import { pageLoad } from "./page-load.js";
 
-createHome();
-createMenu();
-createContact();
+pageLoad();
