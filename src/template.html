@@ -14,26 +14,36 @@
   <body>
     <header>
       <h1>Izakaya Maru</h1>
-      <nav>
-        <button class="nav-btn home">Home</button>
-        <button class="nav-btn menu">Menu</button>
-        <button class="nav-btn contact">Contact</button>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
+      <nav class="nav">
+        <button class="hamburger-menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+
+        <div class="nav-desktop">
+          <button class="nav-btn home">HOME</button>
+          <button class="nav-btn menu">MENU</button>
+          <button class="nav-btn contact">CONTACT</button>
+        </div>
       </nav>
     </header>
+    <div class="dropdown">
+      <button class="nav-btn home">HOME</button>
+      <button class="nav-btn menu">MENU</button>
+      <button class="nav-btn contact">CONTACT</button>
+    </div>
     <div id="content"></div>
   </body>
 </html>

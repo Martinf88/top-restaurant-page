@@ -2,6 +2,8 @@
   --primary-bg-color: hsl(0, 5%, 4%);
   --primary-text-color: hsl(0, 0%, 90%);
   --secondary-text-color: hsl(0, 60%, 50%);
+  --nav-text-color: hsl(40, 10%, 50%);
+  --border-color: hsl(40, 10%, 30%);
   --accent-color: hsl(0, 90%, 50%);
 }
 
@@ -40,7 +42,7 @@ header {
   align-items: center;
   background-color: var(--primary-bg-color);
   color: var(--secondary-text-color);
-  padding: 10px 30px;
+  padding: 10px 20px;
 }
 
 header h1 {
@@ -49,13 +51,56 @@ header h1 {
 
 nav {
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 
-.nav-btn {
+.dropdown {
+  position: fixed;
+  top: 53px;
+
+  background: var(--primary-bg-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+
+  width: 100%;
+  padding: 15px 20px;
+
+  overflow: hidden;
+
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+
+  transition:
+    max-height 0.3s ease,
+    opacity 0.2s ease,
+    transform 0.3s ease,
+    padding 0.3s ease;
+}
+
+.dropdown.open {
+  max-height: 300px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hamburger-menu {
+  display: block;
+}
+
+.nav-desktop {
   display: none;
-  color: hsl(40, 15%, 50%);
-  font-size: 1.3rem;
+}
+
+.nav-btn {
+  color: var(--nav-text-color);
+  font-size: 1.01rem;
   font-family: "Lora", serif;
 }
 
@@ -105,5 +150,20 @@ nav {
 
 .size-6 {
   height: 30px;
-  color: var(--secondary-text-color);
+  color: var(--nav-text-color);
+}
+
+@media (min-width: 530px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: flex;
+    gap: 30px;
+  }
 }
