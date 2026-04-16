@@ -16,6 +16,7 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   line-height: 1.5;
+  background-color: var(--primary-bg-color);
 }
 
 h1,
@@ -105,12 +106,18 @@ nav {
 }
 
 #content {
+  display: flex;
+  flex: 1;
+  color: #f2f2f2;
+}
+
+#home {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #f2f2f2;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./assets/pema-g-lama-6cfK0SEtpbY-unsplash.jpg");
@@ -118,9 +125,81 @@ nav {
   background-position: center;
 }
 
+#menu {
+  flex: 1;
+  background: hsl(0, 0%, 10%);
+  padding: 80px 15px;
+}
+
+.menu__title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--secondary-text-color);
+}
+
+.menu__item {
+  font-family: "Lora", serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+}
+
+.menu__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__item-title {
+  font-size: 1.2rem;
+}
+
+.menu__item-price {
+  color: var(--secondary-text-color);
+}
+
+.menu__item-desc {
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 70%);
+  margin-top: 0.3rem;
+}
+
+#contact {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Lora", serif;
+  gap: 2rem;
+}
+
+#contact p {
+  color: hsl(0, 0%, 70%);
+  margin: 0;
+}
+
+.contact__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__icon {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
 .content__eyebrow,
-.content__tagline {
-  color: hsl(0, 0%, 90%);
+.content__tagline,
+.content__subtitle {
+  color: hsl(0, 0%, 70%);
   font-family: "Lora", serif;
 }
 
@@ -133,19 +212,26 @@ nav {
   font-size: 3rem;
 }
 
+.content__subtitle {
+  font-size: 1.2rem;
+}
+
 .content__tagline {
   font-size: 1.2rem;
-  margin-top: 2.5rem;
 }
 
 .content__btn {
-  border: 2px solid var(--accent-color);
-  color: var(--accent-color);
+  border: 2px solid var(--secondary-text-color);
+  color: var(--secondary-text-color);
   font-size: 1rem;
   padding: 0.5rem 2rem;
   text-transform: uppercase;
   font-family: "Lora", serif;
   font-weight: 700;
+}
+
+.content__btn:hover {
+  background-color: hsla(0, 60%, 50%, 0.2);
 }
 
 .size-6 {

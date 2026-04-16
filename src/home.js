@@ -10,7 +10,11 @@ export function createHomeSection() {
 
   const title = document.createElement("h1");
   title.classList.add("content__title");
-  title.textContent = "Izakaya Maru";
+  title.textContent = "横丁酒場";
+
+  const subtitle = document.createElement("p");
+  subtitle.classList.add("content__subtitle");
+  subtitle.textContent = "Yokochō Sakaba";
 
   const tagline = document.createElement("p");
   tagline.classList.add("content__tagline");
@@ -23,7 +27,7 @@ export function createHomeSection() {
     loadPage("menu");
   });
 
-  homeSection.append(eyebrow, title, tagline, viewMenu);
+  homeSection.append(eyebrow, title, subtitle, tagline, viewMenu);
 
   return homeSection;
 }
